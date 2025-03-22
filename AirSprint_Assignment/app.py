@@ -56,7 +56,7 @@ with st.form("email_form"):
     st.markdown("📤 **Send this report via email**")
 
     recipient = st.text_input("Recipient Email", value="swelter@airsprint.com")
-    sender = st.text_input("Your Gmail Address", value="youremail@gmail.com")
+    sender = st.text_input("From: James Ding", value="dingjamma11@gmail.com")
     subject = st.text_input("Email Subject", value=f"JimJets Report - {aircraft_group}")
     message = st.text_area("Message", value="Please find the attached invoice summary and breakdown.")
 
