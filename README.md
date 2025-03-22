@@ -7,8 +7,8 @@ This Jupyter Notebook is a **data analysis project** for the **AirSprint Interns
 I analyzed the provided datasets as well as data from API. Created a streamlit application that displayed my visuals (Invoice & March Flight breakdowns) and allows PDF generation, as well as email function.
 
 You can access the application by downloading my repository.
-Then navigate to the folder in terminal:
-streamlit run app.py 
+Then navigate to the folder in terminal: </br>
+streamlit run app.py </br>
 to run the application locally.
 
 ## Requirements Checked
