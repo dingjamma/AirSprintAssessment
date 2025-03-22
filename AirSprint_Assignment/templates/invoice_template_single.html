@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JimJets Invoice Summary</title>
+    <style>
+        @page {
+            size: A4 landscape;  /* 👈 This is the key */
+            margin: 20mm;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 11px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 22px;
+            margin: 40px 40px 5px;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin: 30px 40px 10px;
+            border-bottom: 2px solid #555;
+        }
+
+        .date {
+            margin: 0 40px 20px;
+            font-size: 12px;
+        }
+
+        table {
+            width: calc(100% - 80px);
+            margin: 10px 40px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px;
+            font-size: 10px;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .footer {
+            font-size: 9px;
+            color: #777;
+            margin: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>JimJets Invoice Summary</h1>
+<div class="date"><strong>Date Generated:</strong> {{ today }}</div>
+
+<h2>✈️ {{ aircraft_group }} Aircraft Summary</h2>
+{{ summary_table | safe }}
+
+<h2>🧾 Detailed Flight Breakdown - March 2025</h2>
+{{ invoice_table | safe }}
+
+<div class="footer">
+    JimJets Invoice Report generated automatically by Streamlit + WeasyPrint
+</div>
+
+</body>
+</html>
