@@ -101,8 +101,6 @@ The first step is to import the necessary data files:
 
 - Deploy PDF Export on Cloud: Fix issues related to WeasyPrint and deploy the PDF export functionality on a VM or external server.
   - My AWS is out of money and I couldn't deploy on Streamlit community due to Weasyprint requires installing libraries which I can't do.
-- Testing Email, I couldn't find Application Passwords for my microsoft emails. It worked for gmail but at the moment I can't test it because I am in China.
-  - I don't know why my VPN doesn't allow me to bypass, or maybe it did just it took too long and timed out, will try different approaches.
 
 ---
 
