@@ -12,7 +12,7 @@ df_invoice = pd.read_csv("invoice.csv")
 st.title("📄 JimJets Invoice Summary Dashboard")
 st.write(f"**Report Date:** {date.today().strftime('%Y-%m-%d')}")
 
-# CJ2+ / CJ3+ toggle using a radio button
+# CJ2+ / CJ3+ toggle
 aircraft_group = st.radio("Select Aircraft Group:", ["CJ2+", "CJ3+"], horizontal=True)
 
 # Display selected group with index hidden
@@ -28,7 +28,7 @@ else:
 # Pre-convert summary table for PDF rendering
 summary_html = selected_df.to_html(index=False)
 
-# Show invoice table (always the same)
+# Show invoice table
 st.header("🧾 Detailed Flight Breakdown - March 2025")
 st.dataframe(df_invoice.style.hide(axis="index"))
 
@@ -51,7 +51,7 @@ with st.expander("📥 Export to PDF"):
         st.session_state["last_pdf"] = output_path
         st.success(f"✅ PDF for {aircraft_group} Generated!")
 
-# Email Form (only works if PDF is generated)
+# Email Form
 with st.form("email_form"):
     st.markdown("📤 **Send this report via email**")
 
@@ -60,7 +60,6 @@ with st.form("email_form"):
     subject = st.text_input("Email Subject", value=f"JimJets Report - {aircraft_group}")
     message = st.text_area("Message", value="Please find the attached invoice summary and breakdown.")
 
-    # 🔐 Your App Password goes here — do not share it publicly
     app_password = "qznk hlgw ydaq ftyz"
 
     submit = st.form_submit_button("Send Email")
