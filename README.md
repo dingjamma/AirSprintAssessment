@@ -4,7 +4,7 @@
 
 This Jupyter Notebook is a **data analysis project** for the **AirSprint Internship**.
 
-I analyzed the provided datasets as well as data from API. Created a streamlit application that displayed my visuals (Invoice Summary & Invoice) and allows PDF generation, as well as email function.
+I analyzed the provided datasets as well as data from API. Created a streamlit application that displayed my visuals (Invoice & March Flight breakdowns) and allows PDF generation, as well as email function.
 
 ## Requirements Checked
 1. Data Processing & Transformation ✅ 
